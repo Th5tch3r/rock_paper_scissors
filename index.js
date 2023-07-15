@@ -49,7 +49,7 @@ function playRound(playerSelection) {
                 playerSelection === "Paper" && computerSelection === "Scissors" ||
                 playerSelection === "Scissors" && computerSelection === "Rock") {
                         compScore++;
-                        result = "Harry wins! " + computerSelection + "beats " + playerSelection + "<br> Harry's Score " + compScore + "<br>Your Score: " + playerScore;
+                        result = "Harry wins! " + computerSelection + " beats " + playerSelection + "<br> Harry's Score " + compScore + "<br>Your Score: " + playerScore;
 
                         if ( compScore == 5 && playerScore < 5) {
                                 result = "Harry has win the game!";
@@ -57,7 +57,7 @@ function playRound(playerSelection) {
                         }
         } else {
                 playerScore++;
-                result = "You win! " + playerSelection + "beats " + computerSelection + "<br> Harry's Score " + compScore + "<br>Your Score: " + playerScore;
+                result = "You win! " + playerSelection + " beats " + computerSelection + "<br> Harry's Score " + compScore + "<br>Your Score: " + playerScore;
                 if (playerScore == 5 && compScore < 5) {
                         result = "You have win the game!";
                         disable();

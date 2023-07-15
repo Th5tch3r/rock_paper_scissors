@@ -1,14 +1,16 @@
-// console.log("hello");
 // Queries buttons
 const buttons = document.querySelectorAll("input");
 
+let playerScore = 0;
+let compScore = 0;
+
 // Create a forEach loop for the buttons 
 // use .addEventListener on click to send value 
-buttons.forEach(button => {
-        button.addEventListener("click", function() {
-               playRound(button.value)
-        })
-})
+// buttons.forEach(button => {
+//         button.addEventListener("click", function() {
+//                playRound(button.value)
+//         })
+// })
 
 // create a getComputerChoice function
 // include an array of items for function to choose from
@@ -35,23 +37,35 @@ function getComputerChoice() {
 // count player and computer score
 // declare score on global scope for global access
 
-let playerScore = 0;
-let compScore = 0;
-
 function playRound(playerSelection) {
         let computerSelection = getComputerChoice();
+        let result = "";
+
         if (playerSelection === computerSelection) {
-                return ("It's a tie!")
+                result = "It's a tie " + "you both chose " + playerSelection + "Harry's Score " + compScore + "Your Score: " + playerScore;
         } else if (playerSelection === "Rock" && computerSelection === "Paper" ||
                 playerSelection === "Paper" && computerSelection === "Scissors" ||
                 playerSelection === "Scissors" && computerSelection === "Rock") {
                         compScore++;
-                        return ("Harry wins!")
+                        result = "Harry wins!";
         } else {
                 playerScore++;
-                return ("You win!")
+                result = "You win!";
         }
+
+        document.getElementById("result").innerHTML = result;
+        return;
 }
+
+// create an onclick to trigger input button type so that whenever it is click,
+// playRound automatically has an argument and run
+// Embedded user value from button.value using addEventListener
+
+buttons.forEach(button => {
+        button.addEventListener("click", function() {
+                playRound(button.value);
+        })
+})
 
 // Test to see if playRound() works
 // const playerSelection = "Rock";
@@ -61,15 +75,15 @@ function playRound(playerSelection) {
 // create a for loop to repeat the game 5 times inside the function game
 // use playRound() inside to keep count of player and comp score 
 
-function game() {
-        for( let i = 0; i < 5; i++) {
-                // let playerSelection = playerChoice;
-                // const computerSelection = getComputerChoice();
-                console.log(playRound(playerSelection))
-                console.log("You:" + playerScore);
-                console.log("Harry:" + compScore);
-        }
-}
+// function game() {
+//         for( let i = 0; i < 5; i++) {
+//                 const playerSelection = makeChoice();
+//                 const computerSelection = getComputerChoice();
+//                 console.log(playRound(playerSelection,computerSelection));
+//                 console.log("You:" + playerScore);
+//                 console.log("Harry:" + compScore);
+//         }
+// }
 
 // Test to see if game() works
-console.log(game())
+// console.log(game());

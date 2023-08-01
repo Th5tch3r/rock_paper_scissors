@@ -6,15 +6,16 @@
         <title>Defeat Harry</title>
         <link rel="stylesheet" href="./styles.css">
         <link rel="icon" type="image/x-icon" href="#">
+        <!-- add script with defer attribute to let the page loaded first -->
+        <script src="./index.js" defer></script>
 </head>
 <body>
-        <!-- <script src="./index.js"></script> -->
         <!-- Use input button type to send value to js file -->
         <input class="rock" type="button" value="Rock"></input>
         <input class="paper" type="button" value="Paper"></input>
         <input class="scissors" type="button" value="Scissors"></input>
         <div id="result"></div>
         <!-- Placing script at bottom for .addEventListener to be in function after page load -->
-        <script src="./index.js"></script>
+        <!-- <script src="./index.js"></script> -->
 </body>
 </html>

@@ -20,8 +20,6 @@ function getComputerChoice() {
         return compChoice[Math.floor(Math.random() * compChoice.length)];
 }
 
-// Test to see if getComputerChoice() works
-// console.log(getComputerChoice());
 
 // Create a disable to click on button function so that either comp or player reaches score of 5 first, wins
 function disable() {
@@ -30,14 +28,6 @@ function disable() {
         })
 }
 
-
-// create function to play single round of rock paper scissors
-// should take 2 parameters (playerSelection, computerSelection)
-// create conditionals to compare the 2 arguments
-// if the same then return "tie", if not then return "You win" or "You lose" based on conditions 
-// count player and computer score
-// declare score on global scope for global access
-// Set condition so that if comp or player reaches score of 5 first then make the game done and disable buttons
 
 function playRound(playerSelection) {
         let computerSelection = getComputerChoice();
@@ -78,23 +68,3 @@ buttons.forEach(button => {
         })
 })
 
-// Test to see if playRound() works
-// const playerSelection = "Rock";
-// const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection), computerSelection);
-
-// create a for loop to repeat the game 5 times inside the function game
-// use playRound() inside to keep count of player and comp score 
-
-// function game() {
-//         for( let i = 0; i < 5; i++) {
-//                 const playerSelection = makeChoice();
-//                 const computerSelection = getComputerChoice();
-//                 console.log(playRound(playerSelection,computerSelection));
-//                 console.log("You:" + playerScore);
-//                 console.log("Harry:" + compScore);
-//         }
-// }
-
-// Test to see if game() works
-// console.log(game());

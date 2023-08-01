@@ -55,7 +55,6 @@ function playRound(playerSelection) {
         }
 
         document.getElementById("result").innerHTML = result;
-        // return;
 }
 
 // create an onclick to trigger input button type so that whenever it is click,

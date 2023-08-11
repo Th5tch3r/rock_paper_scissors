@@ -34,22 +34,22 @@ function playRound(playerSelection) {
         let result = "";
 
         if (playerSelection === computerSelection) {
-                result = "It's a tie " + "you both chose " + playerSelection + "<br>Harry's Score " + compScore + "<br>Your Score: " + playerScore;
+                result = "It's a tie " + "you both chose " + playerSelection + "<br>Harry's Score: " + compScore + "<br>Your Score: " + playerScore;
         } else if (playerSelection === "Rock" && computerSelection === "Paper" ||
                 playerSelection === "Paper" && computerSelection === "Scissors" ||
                 playerSelection === "Scissors" && computerSelection === "Rock") {
                         compScore++;
-                        result = "Harry wins! " + computerSelection + " beats " + playerSelection + "<br> Harry's Score " + compScore + "<br>Your Score: " + playerScore;
+                        result = "Harry wins! " + computerSelection + " beats " + playerSelection + "<br> Harry's Score: " + compScore + "<br>Your Score: " + playerScore;
 
                         if ( compScore == 5 && playerScore < 5) {
-                                result = "Harry has win the game!";
+                                result = "Harry has win the game, you died!";
                                 disable();
                         }
         } else {
                 playerScore++;
-                result = "You win! " + playerSelection + " beats " + computerSelection + "<br> Harry's Score " + compScore + "<br>Your Score: " + playerScore;
+                result = "You win! " + playerSelection + " beats " + computerSelection + "<br> Harry's Score: " + compScore + "<br>Your Score: " + playerScore;
                 if (playerScore == 5 && compScore < 5) {
-                        result = "You have win the game!";
+                        result = "You have win the game and survived!";
                         disable();
                 }
         }

@@ -67,3 +67,9 @@ buttons.forEach(button => {
         })
 })
 
+const retryButton = document.getElementById("retry");
+
+retryButton.addEventListener("click", () => {
+        window.location.reload();
+})
+
